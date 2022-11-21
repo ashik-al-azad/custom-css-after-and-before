@@ -1,0 +1,39 @@
+/* window overlay*/
+.window {
+    position: relative;
+}
+
+.window .img {
+    width: 100vw;
+    height: 500px;
+    position: relative;
+}
+
+.window .img img {
+    height: 100%;
+    width: 100%;
+}
+
+.window .img::before,
+.window .img::after {
+    content: "";
+    position: absolute;
+    background: aqua;
+    width: 0%;
+    height: 98.5%;
+    right: 0;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.window .img:hover:before {
+    width: 50%;
+}
+
+.window .img::after {
+    left: 0;
+}
+
+.window .img:hover::after {
+    width: 50%;
+}

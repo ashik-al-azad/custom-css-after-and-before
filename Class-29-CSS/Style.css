@@ -1,0 +1,78 @@
+.box{
+   width: 500px;
+   height: 500px;
+   margin: 50px auto;
+   background-size: cover;
+   background-position: center center;
+   position: relative;
+}
+.box::before{
+   background-color: red;
+   width: 250px;
+   height: 500px;
+   content: '';
+   display: block;
+   clear: both;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: 2s;
+}
+.box::after{
+   background-color: green;
+   width: 250px;
+   height: 500px;
+   content: '';
+   display: block;
+   clear: both;
+   position: absolute;
+   top: 0;
+   right: 0;
+   transition: 2s;
+}
+
+
+
+.nice{
+   width: 500px;
+   height: 500px;
+   margin: 50px auto;
+   background-size: cover;
+   background-image: url(pic.jpg);
+   background-position: center center;
+   position: relative;
+}
+.nice::before{
+   background-color:green;
+   width: 250px;
+   height: 500px;
+   content: '';
+   display: block;
+   clear: both;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transition: 2s;
+}
+.nice::after{
+   background-color: green;
+   width: 250px;
+   height: 500px;
+   content: '';
+   display: block;
+   clear: both;
+   position: absolute;
+   top: 0;
+   right: 0;
+   transition: 2s;
+}
+.nice:hover::before{
+   left: -250px;
+   transform: rotatey(180deg);
+   background-color: #91282B;
+}
+.nice:hover::after{
+   right: -250px;
+   transform: rotatey(180deg);
+   background-color: #FF596B;
+}
